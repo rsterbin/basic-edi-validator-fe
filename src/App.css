@@ -2,37 +2,56 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .wrapper {
+  overflow: auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .formSide {
+  float: left;
+  width: 45%;
+}
+.App .resultSide {
+  float: right;
+  width: 45%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .buttonBox span {
+  padding-right: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.App .buttonBox .confirm button {
+  margin-right: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .buttonBox .confirm button:last-child {
+  margin-right: 0;
 }
+
+.App textarea, .App pre {
+  display: block;
+  width: 99%;
+  height: 30rem;
+  margin: 0 auto 1rem auto;
+  overflow: auto;
+  border: 0.025rem solid gray;
+  text-align: left;
+  white-space: pre-wrap;
+  padding: 0.45rem;
+}
+
+.App pre.empty {
+  background-color: lightgray;
+}
+
+.App pre.error {
+  background-color: lightsalmon;
+  color: darkred;
+}
+
+.App pre.success {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+

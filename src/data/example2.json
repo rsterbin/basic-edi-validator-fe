@@ -1,0 +1,386 @@
+{
+  "data": {
+    "code": "invalid",
+    "output": {
+      "interchanges": [
+        {
+          "interchange_control_header_ISA": {},
+          "groups": [
+            {
+              "functional_group_header_GS": {},
+              "transaction_sets": [
+                {
+                  "detail": {
+                    "not_in_spec_1_asdf_asdf": {}
+                  },
+                  "set": "810"
+                }
+              ],
+              "functional_group_trailer_GE": {},
+              "release": "008010"
+            }
+          ],
+          "interchange_control_trailer_IEA": {},
+          "delimiters": {
+            "element": "*",
+            "segment": "~",
+            "sub_element": "^",
+            "repetition": ":"
+          }
+        }
+      ],
+      "__version": "jedi@2.0"
+    },
+    "errors": [
+      {
+        "code": "unknown_segment",
+        "message": "Unknown segment asdf at position 1 in detail",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "transaction_sets",
+          "0",
+          "detail",
+          "not_in_spec_1_asdf_asdf"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GS-01 not specified in segment GS",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_header_GS"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GS-02 not specified in segment GS",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_header_GS"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GS-03 not specified in segment GS",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_header_GS"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GS-04 not specified in segment GS",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_header_GS"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GS-05 not specified in segment GS",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_header_GS"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GS-06 not specified in segment GS",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_header_GS"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GS-07 not specified in segment GS",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_header_GS"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GS-08 not specified in segment GS",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_header_GS"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GE-01 not specified in segment GE",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_trailer_GE"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element GE-02 not specified in segment GE",
+        "path": [
+          "interchanges",
+          "0",
+          "groups",
+          "0",
+          "functional_group_trailer_GE"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-01 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-02 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-03 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-04 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-05 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-06 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-07 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-08 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-09 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-10 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-11 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-12 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-13 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-14 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-15 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element ISA-16 not specified in segment ISA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_header_ISA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element IEA-01 not specified in segment IEA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_trailer_IEA"
+        ],
+        "severity": "error"
+      },
+      {
+        "code": "element_required",
+        "message": "Mandatory element IEA-02 not specified in segment IEA",
+        "path": [
+          "interchanges",
+          "0",
+          "interchange_control_trailer_IEA"
+        ],
+        "severity": "error"
+      }
+    ]
+  },
+  "status": 200,
+  "statusText": "",
+  "headers": {
+    "content-length": "5553",
+    "content-type": "application/json;charset=utf-8"
+  },
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json; charset=utf-8",
+      "Authorization": "Key <REDACTED>"
+    },
+    "baseURL": "https://edi-core.stedi.com/2021-06-05",
+    "method": "post",
+    "url": "/translate",
+    "data": "{\"input\":\"asdf\",\"input_format\":\"edi\",\"output_format\":\"jedi@2.0\"}"
+  },
+  "request": {}
+}

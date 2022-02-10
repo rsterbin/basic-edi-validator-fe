@@ -1,25 +1,191 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import axios from 'axios';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Config from './data/config.json';
+import EXAMPLE1 from './data/example1.json';
+import EXAMPLE2 from './data/example2.json';
+
+const SWAP_IN_FAKE = true;
+
+const Api = axios.create({
+  baseURL: Config.baseUrl,
+  headers: {
+    "Content-Type": "application/json; charset=utf-8",
+    "Authorization": `Key ${Config.apiKey}`,
+  }
+});
+
+class App extends Component {
+
+  state = {
+    document: '',
+    textActive: true,
+    confirming: false,
+    processing: false,
+    processed: false,
+    results: null,
+    error: null
+  }
+
+  doValidate = (e) => {
+    e.preventDefault();
+    this.setState({ textActive: false });
+    if (this.state.document.length < 1) {
+      alert("Nothing to send");
+      this.setState({ textActive: true });
+    } else {
+      this.setState({ confirming: true });
+    }
+  }
+
+  doFakeProcess = () => {
+    window.setTimeout(() => {
+      const index = Math.random();
+      console.log(index);
+      if (index > 0.5) {
+        this.markValid(EXAMPLE1);
+      } else {
+        this.markInvalid(EXAMPLE2);
+      }
+    }, 300);
+  }
+
+  parseError = (error) => {
+    if (!error.isAxiosError) {
+      return {
+        code: 'UNKNOWN',
+        message: 'Unknown error',
+        context: { baseError: error }
+      };
+    } else {
+      const info = error.toJSON();
+      let context = {
+          message: info.message,
+          request_url: info.config.baseURL,
+          request_data: info.config.data
+      };
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        context.status = error.response.status;
+        return {
+          code: error.response.data.code,
+          message: error.response.data.msg,
+          context: context
+        };
+      } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+        // http.ClientRequest in node.js
+        return {
+          code: 'NETWORK_FAILURE',
+          message: context.message,
+          context: context
+        };
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        return {
+          code: 'UNKNOWN',
+          message: error.message,
+          context: context
+        };
+      }
+    }
+  }
+
+  markValid = (res) => {
+    this.setState({ results: res, error: null, textActive: true, processing: false, processed: true });
+  };
+
+  markInvalid = (err) => {
+    this.setState({ results: null, error: err, textActive: true, processing: false, processed: true });
+  };
+
+  doRealProcess = () => {
+    Api.post('/translate', {
+        input: this.state.document,
+        input_format: 'edi',
+        output_format: 'jedi@2.0'
+      })
+      .then(res => {
+        if ('data' in res && 'code' in res.data && res.data.code === "valid") {
+          this.markValid(res);
+        } else {
+          this.markInvalid(res);
+        }
+      })
+      .catch(err => {
+        const parsed = this.parseError(err);
+        this.markInvalid(parsed);
+      })
+  }
+
+  doConfirmYes = (e) => {
+    e.preventDefault();
+    this.setState({ confirming: false, processing: true, processed: false, results: null, error: null });
+    if (SWAP_IN_FAKE) {
+      this.doFakeProcess();
+    } else {
+      this.doRealProcess();
+    }
+  };
+
+  doConfirmNo = (e) => {
+    e.preventDefault();
+    this.setState({ results: null, textActive: true, confirming: false });
+  };
+
+  changedText = (e) => {
+    this.setState({ document: e.target.value });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>EDI Validator</h1>
+        <form>
+          <div className="buttonBox">
+            {!this.state.confirming && !this.state.processing &&
+              <button onClick={this.doValidate}>Validate</button>
+            }
+            {this.state.confirming &&
+              <div className="confirm">
+                <span>Are you sure? It costs money.</span>
+                <button onClick={this.doConfirmYes}>Yes</button>
+                <button onClick={this.doConfirmNo}>No</button>
+              </div>
+            }
+            {this.state.processing &&
+              <span>...processing...</span>
+            }
+          </div>
+          <div className="wrapper">
+            <div className="formSide">
+              <h3>EDI doc</h3>
+              <textarea
+                onChange={this.changedText}
+                disabled={!this.state.textActive}
+                value={this.state.document}
+                />
+            </div>
+            <div className="resultSide">
+              <h3>Results</h3>
+              <pre className={this.state.processed ? (this.state.error ? 'error' : 'success') : 'empty'}>
+                {this.state.error &&
+                  JSON.stringify(this.state.error, null, 2)
+                }
+                {this.state.results &&
+                  JSON.stringify(this.state.results, null, 2)
+                }
+              </pre>
+            </div>
+          </div>
+        </form>
+      </div>
+    );
+  }
 }
 
 export default App;
