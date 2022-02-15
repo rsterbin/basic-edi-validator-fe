@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import ErrorsList from './components/ErrorsList/ErrorsList';
+import ModeledOutput from './components/ModeledOutput/ModeledOutput';
+import RawResults from './components/RawResults';
+
 import './App.css';
 
 import Config from './data/config.json';
@@ -142,6 +146,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="App">
         <h1>EDI Validator</h1>
@@ -161,6 +166,7 @@ class App extends Component {
               <span>...processing...</span>
             }
           </div>
+          <ErrorsList data={this.state.error || this.state.results} />
           <div className="wrapper">
             <div className="formSide">
               <h3>EDI doc</h3>
@@ -172,17 +178,20 @@ class App extends Component {
             </div>
             <div className="resultSide">
               <h3>Results</h3>
-              <pre className={this.state.processed ? (this.state.error ? 'error' : 'success') : 'empty'}>
-                {this.state.error &&
-                  JSON.stringify(this.state.error, null, 2)
-                }
-                {this.state.results &&
-                  JSON.stringify(this.state.results, null, 2)
-                }
-              </pre>
+              <div className="ResultsBlock">
+                {this.state.processed &&
+                  <ModeledOutput
+                    data={this.state.error || this.state.results}
+                    className={this.state.error ? 'error' : 'success'}
+                   />}
+                {!this.state.processed &&
+                  <div className="Waiting empty"></div>}
+              </div>
             </div>
           </div>
         </form>
+        <RawResults data={this.state.error || this.state.results}
+          className={this.state.error ? 'error' : 'success'} />
       </div>
     );
   }

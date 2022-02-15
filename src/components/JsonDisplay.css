@@ -1,0 +1,10 @@
+
+pre.JsonDisplay {
+  display: block;
+  overflow: auto;
+  border: 0.025rem solid gray;
+  text-align: left;
+  white-space: pre-wrap;
+  padding: 0.45rem;
+}
+

@@ -29,28 +29,38 @@
   margin-right: 0;
 }
 
-.App textarea, .App pre {
+.App textarea, .App .Waiting, .App .ModeledOutput {
   display: block;
-  width: 99%;
+  width: 94%;
   height: 30rem;
   margin: 0 auto 1rem auto;
   overflow: auto;
   border: 0.025rem solid gray;
   text-align: left;
-  white-space: pre-wrap;
   padding: 0.45rem;
 }
 
-.App pre.empty {
+.App .RawResults pre.JsonDisplay {
+  width: 88%;
+  height: 30rem;
+  margin: 0 auto 1rem auto;
+}
+
+.App .ListedError {
+  width: 88%;
+  margin: 1rem auto;
+}
+
+.App .empty {
   background-color: lightgray;
 }
 
-.App pre.error {
+.App .error {
   background-color: lightsalmon;
   color: darkred;
 }
 
-.App pre.success {
+.App .success {
   background-color: lightgreen;
   color: darkgreen;
 }
