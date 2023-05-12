@@ -1,842 +1,779 @@
 {
   "data": {
-    "code": "valid",
     "output": {
-      "interchanges": [
+      "transactionSets": [
         {
-          "interchange_control_header_ISA": {
-            "authorization_information_qualifier_01": "no_authorization_information_present_no_meaningful_information_in_i02_00",
-            "authorization_information_02": "",
-            "security_information_qualifier_03": "no_security_information_present_no_meaningful_information_in_i04_00",
-            "security_information_04": "",
-            "interchange_id_qualifier_05": "mutually_defined_ZZ",
-            "interchange_sender_id_06": "UNKNOWN",
-            "interchange_id_qualifier_07": "mutually_defined_ZZ",
-            "interchange_receiver_id_08": "TESTY",
-            "interchange_date_09": "220208",
-            "interchange_time_10": "1255",
-            "repetition_separator_11": "|",
-            "interchange_control_version_number_12": "00501",
-            "interchange_control_number_13": "100000014",
-            "acknowledgment_requested_14": "no_interchange_acknowledgment_requested_0",
-            "interchange_usage_indicator_15": "test_data_T",
-            "component_element_separator_16": "}"
+          "heading": {
+            "transaction_set_header_ST": {
+              "transaction_set_identifier_code_01": "846",
+              "transaction_set_control_number_02": 1
+            },
+            "beginning_segment_for_inventory_inquiry_advice_BIA": {
+              "transaction_set_purpose_code_01": "00",
+              "report_type_code_02": "SI",
+              "reference_identification_03": "966",
+              "date_04": "2023-05-12"
+            },
+            "reference_identification_REF": [
+              {
+                "reference_identification_qualifier_01": "IO",
+                "reference_identification_02": "lowes"
+              }
+            ]
           },
-          "groups": [
-            {
-              "functional_group_header_GS": {
-                "functional_identifier_code_01": "order_status_information_869_870_RS",
-                "application_senders_code_02": "UNKNOWN",
-                "application_receivers_code_03": "TESTY",
-                "date_04": "20220208",
-                "time_05": "1255",
-                "group_control_number_06": "1001",
-                "responsible_agency_code_07": "accredited_standards_committee_x12_X",
-                "version_release_industry_identifier_code_08": "005010"
-              },
-              "transaction_sets": [
-                {
-                  "heading": {
-                    "transaction_set_header_ST": {
-                      "transaction_set_identifier_code_01": "870",
-                      "transaction_set_control_number_02": "0001"
+          "detail": {
+            "item_identification_LIN_loop": [
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "1",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5227839",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "19332",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "840008249250"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "12oz Cocktail Tumbler, Cardinal, Matte"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 8.66
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "33",
+                      "quantity_02": 0,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
                     },
-                    "beginning_segment_for_order_status_report_BSR": {
-                      "status_report_code_01": "prearranged_schedule_or_agreement_2",
-                      "order_item_code_02": "selected_orders_selected_items_PP",
-                      "reference_identification_03": "ABC123",
-                      "date_04": "20220208",
-                      "product_date_code_05": "selected_date_parameters_SD",
-                      "time_07": "1255"
-                    },
-                    "reference_information_REF_loop": [
+                    "reference_identification_REF_loop": [
                       {
-                        "reference_information_REF": {
-                          "reference_identification_qualifier_01": "internal_vendor_number_IA",
-                          "reference_identification_02": "V1082"
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "0"
                         }
                       }
                     ]
-                  },
-                  "detail": {
-                    "hierarchical_level_HL_loop": [
+                  }
+                ]
+              },
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "2",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5227840",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "19333",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "840008249267"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "12oz Cocktail Tumbler, Majestic Purple, Matte"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 8.66
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "33",
+                      "quantity_02": 0,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
+                    },
+                    "reference_identification_REF_loop": [
                       {
-                        "hierarchical_level_HL": {
-                          "hierarchical_id_number_01": "1",
-                          "hierarchical_level_code_03": "order_O"
-                        },
-                        "purchase_order_reference_PRF": {
-                          "purchase_order_number_01": "F1"
-                        },
-                        "item_status_report_ISR_loop": [
-                          {
-                            "item_status_report_ISR": {
-                              "shipment_order_status_code_01": "in_process_IN"
-                            }
-                          }
-                        ],
-                        "reference_information_REF_loop": [
-                          {
-                            "reference_information_REF": {
-                              "reference_identification_qualifier_01": "schedule_reference_number_72",
-                              "reference_identification_02": "F1"
-                            }
-                          }
-                        ],
-                        "party_identification_N1_loop": [
-                          {
-                            "party_identification_N1": {
-                              "entity_identifier_code_01": "ship_to_ST",
-                              "name_02": "Testing",
-                              "identification_code_qualifier_03": "assigned_by_buyer_or_buyers_agent_92",
-                              "identification_code_04": "L9"
-                            },
-                            "administrative_communications_contact_PER": [
-                              {
-                                "contact_function_code_01": "buyer_name_or_department_BD",
-                                "name_02": "Buyer McTest",
-                                "communication_number_qualifier_03": "electronic_mail_EM",
-                                "communication_number_04": "buyer.mctest@example.com"
-                              }
-                            ]
-                          },
-                          {
-                            "party_identification_N1": {
-                              "entity_identifier_code_01": "supplier_manufacturer_SU",
-                              "name_02": "Testington Solutions, LLC",
-                              "identification_code_qualifier_03": "assigned_by_buyer_or_buyers_agent_92",
-                              "identification_code_04": "V1082"
-                            },
-                            "administrative_communications_contact_PER": [
-                              {
-                                "contact_function_code_01": "supplier_contact_SU",
-                                "name_02": "Seller Testington",
-                                "communication_number_qualifier_03": "electronic_mail_EM",
-                                "communication_number_04": "seller.testington@example.com"
-                              }
-                            ]
-                          }
-                        ]
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "0"
+                        }
                       },
                       {
-                        "hierarchical_level_HL": {
-                          "hierarchical_id_number_01": "2",
-                          "hierarchical_parent_id_number_02": "1",
-                          "hierarchical_level_code_03": "item_I"
-                        },
-                        "baseline_item_data_PO1_loop": [
-                          {
-                            "baseline_item_data_PO1": {
-                              "assigned_identification_01": "1",
-                              "quantity_02": "75",
-                              "unit_or_basis_for_measurement_code_03": "case_CA",
-                              "unit_price_04": "535.25",
-                              "basis_of_unit_price_code_05": "price_per_unit_of_measure_UM",
-                              "product_service_id_qualifier_06": "buyers_part_number_BP",
-                              "product_service_id_07": "IT5585",
-                              "product_service_id_qualifier_08": "upc_consumer_package_code_1_5_5_UI",
-                              "product_service_id_09": "999999999999"
-                            },
-                            "additional_item_detail_PO3": {
-                              "change_reason_code_01": "pack_qualifier_PQ",
-                              "quantity_06": "30",
-                              "unit_or_basis_for_measurement_code_07": "each_EA"
-                            },
-                            "product_item_description_PID": [
-                              {
-                                "item_description_type_01": "free_form_F",
-                                "product_process_characteristic_code_02": "product_08",
-                                "description_05": "Testington Wine Bottle, Case of 30"
-                              }
-                            ],
-                            "item_status_report_ISR_loop": [
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "11",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220307"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "3",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220314"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "7",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220321"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "shipment_quantity_increase_SA"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "15",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220328"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "shipment_quantity_decrease_SC"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "14",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220404"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "13",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220411"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "9",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220418"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "2",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220425"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
                       },
                       {
-                        "hierarchical_level_HL": {
-                          "hierarchical_id_number_01": "3",
-                          "hierarchical_parent_id_number_02": "1",
-                          "hierarchical_level_code_03": "item_I"
-                        },
-                        "baseline_item_data_PO1_loop": [
-                          {
-                            "baseline_item_data_PO1": {
-                              "assigned_identification_01": "2",
-                              "quantity_02": "1990",
-                              "unit_or_basis_for_measurement_code_03": "each_EA",
-                              "unit_price_04": "12.99",
-                              "basis_of_unit_price_code_05": "price_per_unit_of_measure_UM",
-                              "product_service_id_qualifier_06": "buyers_part_number_BP",
-                              "product_service_id_07": "IT9637",
-                              "product_service_id_qualifier_08": "upc_consumer_package_code_1_5_5_UI",
-                              "product_service_id_09": "888888888888",
-                              "product_service_id_qualifier_10": "vendors_sellers_part_number_VP",
-                              "product_service_id_11": "5C8C962FB0"
-                            },
-                            "product_item_description_PID": [
-                              {
-                                "item_description_type_01": "free_form_F",
-                                "product_process_characteristic_code_02": "product_08",
-                                "description_05": "Testington Wine Glass, Single"
-                              }
-                            ],
-                            "item_status_report_ISR_loop": [
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "200",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220307"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "220",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220314"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "210",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220321"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "300",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220328"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "140",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220404"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "130",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220411"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "90",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220418"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "no_shipping_schedule_NY"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "forecast_AY",
-                                    "quantity_02": "700",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220425"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
                       },
                       {
-                        "hierarchical_level_HL": {
-                          "hierarchical_id_number_01": "4",
-                          "hierarchical_level_code_03": "order_O"
-                        },
-                        "purchase_order_reference_PRF": {
-                          "purchase_order_number_01": "PCSL83924",
-                          "release_number_02": "0",
-                          "date_04": "20220208"
-                        },
-                        "item_status_report_ISR_loop": [
-                          {
-                            "item_status_report_ISR": {
-                              "shipment_order_status_code_01": "in_process_IN"
-                            }
-                          }
-                        ],
-                        "party_identification_N1_loop": [
-                          {
-                            "party_identification_N1": {
-                              "entity_identifier_code_01": "ship_to_ST",
-                              "name_02": "Testing",
-                              "identification_code_qualifier_03": "assigned_by_buyer_or_buyers_agent_92",
-                              "identification_code_04": "L9"
-                            },
-                            "administrative_communications_contact_PER": [
-                              {
-                                "contact_function_code_01": "buyer_name_or_department_BD",
-                                "name_02": "Buyer McTest",
-                                "communication_number_qualifier_03": "electronic_mail_EM",
-                                "communication_number_04": "buyer.mctest@example.com"
-                              }
-                            ]
-                          },
-                          {
-                            "party_identification_N1": {
-                              "entity_identifier_code_01": "supplier_manufacturer_SU",
-                              "name_02": "Testington Solutions, LLC",
-                              "identification_code_qualifier_03": "assigned_by_buyer_or_buyers_agent_92",
-                              "identification_code_04": "V1082"
-                            },
-                            "administrative_communications_contact_PER": [
-                              {
-                                "contact_function_code_01": "supplier_contact_SU",
-                                "name_02": "Seller Testington",
-                                "communication_number_qualifier_03": "electronic_mail_EM",
-                                "communication_number_04": "seller.testington@example.com"
-                              }
-                            ]
-                          }
-                        ]
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
                       },
                       {
-                        "hierarchical_level_HL": {
-                          "hierarchical_id_number_01": "5",
-                          "hierarchical_parent_id_number_02": "4",
-                          "hierarchical_level_code_03": "item_I"
-                        },
-                        "baseline_item_data_PO1_loop": [
-                          {
-                            "baseline_item_data_PO1": {
-                              "assigned_identification_01": "1",
-                              "quantity_02": "17",
-                              "unit_or_basis_for_measurement_code_03": "case_CA",
-                              "unit_price_04": "535.25",
-                              "basis_of_unit_price_code_05": "price_per_unit_of_measure_UM",
-                              "product_service_id_qualifier_06": "buyers_part_number_BP",
-                              "product_service_id_07": "IT5585",
-                              "product_service_id_qualifier_08": "upc_consumer_package_code_1_5_5_UI",
-                              "product_service_id_09": "999999999999"
-                            },
-                            "additional_item_detail_PO3": {
-                              "change_reason_code_01": "pack_qualifier_PQ",
-                              "quantity_06": "30",
-                              "unit_or_basis_for_measurement_code_07": "each_EA"
-                            },
-                            "product_item_description_PID": [
-                              {
-                                "item_description_type_01": "free_form_F",
-                                "product_process_characteristic_code_02": "product_08",
-                                "description_05": "Testington Wine Bottle, Case of 30"
-                              }
-                            ],
-                            "item_status_report_ISR_loop": [
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "shipped_date_SH",
-                                  "date_02": "20220208"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "shipped_quantity_39",
-                                    "quantity_02": "1",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220207"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "expect_to_ship_by_date_ED",
-                                  "date_02": "20220220"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "on_order_quantity_63",
-                                    "quantity_02": "4",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220214"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "expect_to_ship_by_date_ED",
-                                  "date_02": "20220227"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "on_order_quantity_63",
-                                    "quantity_02": "10",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220221"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "expect_to_ship_by_date_ED",
-                                  "date_02": "20220306"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "on_order_quantity_63",
-                                    "quantity_02": "2",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "case_CA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220228"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "0"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "3",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5227843",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "9815",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "840008208615"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "12oz Skinny Can Cooler, Majestic Purple, Matte"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 8.15
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "33",
+                      "quantity_02": 3678,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
+                    },
+                    "reference_identification_REF_loop": [
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "3"
+                        }
                       },
                       {
-                        "hierarchical_level_HL": {
-                          "hierarchical_id_number_01": "6",
-                          "hierarchical_parent_id_number_02": "4",
-                          "hierarchical_level_code_03": "item_I"
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "5"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "4",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5227853",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "5427",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "819260024486"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "26oz Water Bottle, Cardinal, Matte"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 9.17
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "33",
+                      "quantity_02": 1248,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
+                    },
+                    "reference_identification_REF_loop": [
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "3"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "5"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "5",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5227854",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "19338",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "840008249311"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "26oz Water Bottle, Lake Blue, Matte"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 9.17
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "33",
+                      "quantity_02": 0,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
+                    },
+                    "reference_identification_REF_loop": [
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "0"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "6",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5227855",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "11077",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "840008221652"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "26oz Water Bottle, Majestic Purple, Matte"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 9.17
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "33",
+                      "quantity_02": 71,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
+                    },
+                    "reference_identification_REF_loop": [
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "1"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "0"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "7",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5227856",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "15153",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "840008228255"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "32oz Bottle, Cardinal, Matte"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 11.72
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "33",
+                      "quantity_02": 59,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
+                    },
+                    "line_item_schedule_SCH_loop": [
+                      {
+                        "line_item_schedule_SCH": {
+                          "quantity_01": 140,
+                          "unit_or_basis_for_measurement_code_02": "EA",
+                          "date_time_qualifier_05": "018",
+                          "date_06": "2023-06-26",
+                          "time_07": "10:00:00"
+                        }
+                      }
+                    ],
+                    "reference_identification_REF_loop": [
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "5"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "4"
                         },
-                        "baseline_item_data_PO1_loop": [
+                        "date_time_reference_DTM": [
                           {
-                            "baseline_item_data_PO1": {
-                              "assigned_identification_01": "2",
-                              "quantity_02": "770",
-                              "unit_or_basis_for_measurement_code_03": "each_EA",
-                              "unit_price_04": "12.99",
-                              "basis_of_unit_price_code_05": "price_per_unit_of_measure_UM",
-                              "product_service_id_qualifier_06": "buyers_part_number_BP",
-                              "product_service_id_07": "IT9637",
-                              "product_service_id_qualifier_08": "upc_consumer_package_code_1_5_5_UI",
-                              "product_service_id_09": "888888888888",
-                              "product_service_id_qualifier_10": "vendors_sellers_part_number_VP",
-                              "product_service_id_11": "5C8C962FB0"
-                            },
-                            "product_item_description_PID": [
-                              {
-                                "item_description_type_01": "free_form_F",
-                                "product_process_characteristic_code_02": "product_08",
-                                "description_05": "Testington Wine Glass, Single"
-                              }
-                            ],
-                            "item_status_report_ISR_loop": [
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "shipped_date_SH",
-                                  "date_02": "20220208"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "shipped_quantity_39",
-                                    "quantity_02": "400",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220207"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "expect_to_ship_by_date_ED",
-                                  "date_02": "20220220"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "on_order_quantity_63",
-                                    "quantity_02": "160",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220214"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "expect_to_ship_by_date_ED",
-                                  "date_02": "20220227"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "on_order_quantity_63",
-                                    "quantity_02": "110",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220221"
-                                  }
-                                ]
-                              },
-                              {
-                                "item_status_report_ISR": {
-                                  "shipment_order_status_code_01": "expect_to_ship_by_date_ED",
-                                  "date_02": "20220306"
-                                },
-                                "quantity_information_QTY": [
-                                  {
-                                    "quantity_qualifier_01": "on_order_quantity_63",
-                                    "quantity_02": "100",
-                                    "composite_unit_of_measure_03": {
-                                      "unit_or_basis_for_measurement_code_01": "each_EA"
-                                    }
-                                  }
-                                ],
-                                "date_time_reference_DTM": [
-                                  {
-                                    "date_time_qualifier_01": "ship_week_of_039",
-                                    "date_02": "20220228"
-                                  }
-                                ]
-                              }
-                            ]
+                            "date_time_qualifier_01": "018",
+                            "date_02": "2023-06-26",
+                            "time_03": "10:00:00",
+                            "time_code_04": "20",
+                            "date_time_period_format_qualifier_05": "UN",
+                            "date_time_period_06": "140"
                           }
                         ]
                       }
                     ]
-                  },
-                  "summary": {
-                    "transaction_totals_CTT": {
-                      "number_of_line_items_01": "6"
-                    },
-                    "transaction_set_trailer_SE": {
-                      "number_of_included_segments_01": "106",
-                      "transaction_set_control_number_02": "0001"
-                    }
-                  },
-                  "set": "870"
-                }
-              ],
-              "functional_group_trailer_GE": {
-                "number_of_transaction_sets_included_01": "1",
-                "group_control_number_02": "1001"
+                  }
+                ]
               },
-              "release": "005010"
-            }
-          ],
-          "interchange_control_trailer_IEA": {
-            "number_of_included_functional_groups_01": "1",
-            "interchange_control_number_02": "100000014"
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "8",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5227857",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "15162",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "840008228439"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "32oz Bottle, Lake Blue, Matte"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 11.72
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "33",
+                      "quantity_02": 1419,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
+                    },
+                    "reference_identification_REF_loop": [
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "3"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "6"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "item_identification_LIN": {
+                  "assigned_identification_01": "9",
+                  "product_service_id_qualifier_02": "SK",
+                  "product_service_id_03": "5230191",
+                  "product_service_id_qualifier_04": "VN",
+                  "product_service_id_05": "5425",
+                  "product_service_id_qualifier_06": "UP",
+                  "product_service_id_07": "819260024448"
+                },
+                "product_item_description_PID": [
+                  {
+                    "item_description_type_01": "F",
+                    "product_process_characteristic_code_02": "08",
+                    "description_05": "26oz Water Bottle, Charcoal, Matte"
+                  }
+                ],
+                "date_time_reference_DTM": [
+                  {
+                    "date_time_qualifier_01": "036",
+                    "date_02": "2023-03-12",
+                    "time_03": "22:20:06",
+                    "time_code_04": "20"
+                  }
+                ],
+                "pricing_information_CTP": [
+                  {
+                    "price_identifier_code_02": "UCP",
+                    "unit_price_03": 9.17
+                  }
+                ],
+                "quantity_QTY_loop": [
+                  {
+                    "quantity_QTY": {
+                      "quantity_qualifier_01": "20",
+                      "quantity_02": 0,
+                      "composite_unit_of_measure_03": {
+                        "unit_or_basis_for_measurement_code_01": "EA"
+                      }
+                    },
+                    "reference_identification_REF_loop": [
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH8",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH9",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH10",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH14",
+                          "description_03": "0"
+                        }
+                      },
+                      {
+                        "reference_identification_REF": {
+                          "reference_identification_qualifier_01": "WS",
+                          "reference_identification_02": "WH20",
+                          "description_03": "0"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
-          "delimiters": {
-            "element": "*",
-            "segment": "~",
-            "sub_element": "}",
-            "repetition": "|"
+          "summary": {
+            "transaction_totals_CTT": {
+              "number_of_line_items_01": 9
+            },
+            "transaction_set_trailer_SE": {
+              "number_of_included_segments_01": 105,
+              "transaction_set_control_number_02": 1
+            }
           }
         }
       ],
-      "__version": "jedi@2.0"
+      "envelope": {
+        "interchangeHeader": {
+          "senderQualifier": "ZZ",
+          "senderId": "VELKYTEST      ",
+          "receiverQualifier": "12",
+          "receiverId": "7047581000CHQT ",
+          "controlNumber": "000000359",
+          "authorizationInformationQualifier": "00",
+          "authorizationInformation": "          ",
+          "securityQualifier": "00",
+          "securityInformation": "          ",
+          "date": "2023-05-12",
+          "time": "11:14",
+          "repetitionSeparator": "|",
+          "acknowledgementRequestedCode": "0",
+          "usageIndicatorCode": "T",
+          "componentSeparator": "}",
+          "controlVersionNumber": "00401"
+        },
+        "groupHeader": {
+          "functionalIdentifierCode": "IB",
+          "applicationSenderCode": "VELKYTEST",
+          "applicationReceiverCode": "7047581000CHQT",
+          "controlNumber": "000000359",
+          "date": "2023-05-12",
+          "time": "11:14",
+          "agencyCode": "X",
+          "release": "004010"
+        },
+        "groupTrailer": {
+          "numberOfTransactions": "1",
+          "controlNumber": "000000359"
+        },
+        "interchangeTrailer": {
+          "numberOfFunctionalGroups": "1",
+          "controlNumber": "000000359"
+        }
+      },
+      "delimiters": {
+        "element": "*",
+        "composite": "}",
+        "repetition": "|",
+        "segment": "~"
+      }
     }
   },
   "status": 200,
   "statusText": "",
   "headers": {
-    "content-length": "17517",
-    "content-type": "application/json;charset=utf-8"
+    "access-control-allow-methods": "PUT, GET, HEAD, POST, DELETE, OPTIONS",
+    "access-control-allow-origin": "http://localhost:3002",
+    "access-control-expose-headers": "*",
+    "content-encoding": "gzip",
+    "content-length": "1534",
+    "content-type": "application/json",
+    "date": "Fri, 12 May 2023 20:52:09 GMT",
+    "vary": "origin, access-control-request-method, access-control-request-headers",
+    "x-amz-apigw-id": "E08G-GqtoAMFYvg=",
+    "x-amzn-remapped-content-length": "1534",
+    "x-amzn-requestid": "08776c60-b193-4fdf-ad51-b23383ef1c1e",
+    "x-amzn-trace-id": "Root=1-645ea6f9-548d2787250738710c1004d1"
   },
   "config": {
     "transitional": {
@@ -858,12 +795,13 @@
     "headers": {
       "Accept": "application/json, text/plain, */*",
       "Content-Type": "application/json; charset=utf-8",
-      "Authorization": "Key <REDACTED>"
+      "Authorization": "Key d6O9cps.F7ouo8CqNFhSMJlGlV9pBQ3i"
     },
-    "baseURL": "https://edi-core.stedi.com/2021-06-05",
+    "baseURL": "https://edi-translate.us.stedi.com/2022-01-01",
     "method": "post",
-    "url": "/translate",
-    "data": "{\"input\":\"ISA*00*          *00*          *ZZ*        UNKNOWN*ZZ*TESTY          *220208*1255*|*00501*100000014*0*T*}~\\nGS*RS*UNKNOWN*TESTY*20220208*1255*1001*X*005010~\\nST*870*0001~\\nBSR*2*PP*ABC123*20220208*SD**1255**~\\nREF*IA*V1082~\\nHL*1**O~\\nPRF*F1~\\nISR*IN~\\nREF*72*F1~\\nN1*ST*Testing*92*L9~\\nPER*BD*Buyer McTest*EM*buyer.mctest@example.com~\\nN1*SU*Testington Solutions, LLC*92*V1082~\\nPER*SU*Seller Testington*EM*seller.testington@example.com~\\nHL*2*1*I~\\nPO1*1*75*CA*535.25*UM*BP*IT5585*UI*999999999999~\\nPO3*PQ*****30*EA~\\nPID*F*08***Testington Wine Bottle, Case of 30~\\nISR*NY~\\nQTY*AY*11*CA~\\nDTM*039*20220307~\\nISR*NY~\\nQTY*AY*3*CA~\\nDTM*039*20220314~\\nISR*NY~\\nQTY*AY*7*CA~\\nDTM*039*20220321~\\nISR*SA~\\nQTY*AY*15*CA~\\nDTM*039*20220328~\\nISR*SC~\\nQTY*AY*14*CA~\\nDTM*039*20220404~\\nISR*NY~\\nQTY*AY*13*CA~\\nDTM*039*20220411~\\nISR*NY~\\nQTY*AY*9*CA~\\nDTM*039*20220418~\\nISR*NY~\\nQTY*AY*2*CA~\\nDTM*039*20220425~\\nHL*3*1*I~\\nPO1*2*1990*EA*12.99*UM*BP*IT9637*UI*888888888888*VP*5C8C962FB0~\\nPID*F*08***Testington Wine Glass, Single~\\nISR*NY~\\nQTY*AY*200*EA~\\nDTM*039*20220307~\\nISR*NY~\\nQTY*AY*220*EA~\\nDTM*039*20220314~\\nISR*NY~\\nQTY*AY*210*EA~\\nDTM*039*20220321~\\nISR*NY~\\nQTY*AY*300*EA~\\nDTM*039*20220328~\\nISR*NY~\\nQTY*AY*140*EA~\\nDTM*039*20220404~\\nISR*NY~\\nQTY*AY*130*EA~\\nDTM*039*20220411~\\nISR*NY~\\nQTY*AY*90*EA~\\nDTM*039*20220418~\\nISR*NY~\\nQTY*AY*700*EA~\\nDTM*039*20220425~\\nHL*4**O~\\nPRF*PCSL83924*0**20220208~\\nISR*IN~\\nN1*ST*Testing*92*L9~\\nPER*BD*Buyer McTest*EM*buyer.mctest@example.com~\\nN1*SU*Testington Solutions, LLC*92*V1082~\\nPER*SU*Jason Allen*EM*seller.testington@example.com~\\nHL*5*4*I~\\nPO1*1*17*CA*535.25*UM*BP*IT5585*UI*999999999999~\\nPO3*PQ*****30*EA~\\nPID*F*08***Testington Wine Bottle, Case of 30~\\nISR*SH*20220208~\\nQTY*39*1*CA~\\nDTM*039*20220207~\\nISR*ED*20220220~\\nQTY*63*4*CA~\\nDTM*039*20220214~\\nISR*ED*20220227~\\nQTY*63*10*CA~\\nDTM*039*20220221~\\nISR*ED*20220306~\\nQTY*63*2*CA~\\nDTM*039*20220228~\\nHL*6*4*I~\\nPO1*2*770*EA*12.99*UM*BP*IT9637*UI*888888888888*VP*5C8C962FB0~\\nPID*F*08***Testington Wine Glass, Single~\\nISR*SH*20220208~\\nQTY*39*400*EA~\\nDTM*039*20220207~\\nISR*ED*20220220~\\nQTY*63*160*EA~\\nDTM*039*20220214~\\nISR*ED*20220227~\\nQTY*63*110*EA~\\nDTM*039*20220221~\\nISR*ED*20220306~\\nQTY*63*100*EA~\\nDTM*039*20220228~\\nCTT*6~\\nSE*106*0001~\\nGE*1*1001~\\nIEA*1*100000014~\",\"input_format\":\"edi\",\"output_format\":\"jedi@2.0\"}"
+    "url": "/x12/to-json",
+    "data": "{\"input\":\"ISA*00*          *00*          *ZZ*VELKYTEST      *12*7047581000CHQT *230512*1114*|*00401*000000359*0*T*}~\\nGS*IB*VELKYTEST*7047581000CHQT*20230512*1114*359*X*004010~\\nST*846*0001~\\nBIA*00*SI*966*20230512~\\nREF*IO*lowes~\\nLIN*1*SK*5227839*VN*19332*UP*840008249250~\\nPID*F*08***12oz Cocktail Tumbler, Cardinal, Matte~\\nCTP**UCP*8.66~\\nQTY*33*0*EA~\\nLS*REF~\\nREF*WS*WH8*0~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*0~\\nLE*REF~\\nLIN*2*SK*5227840*VN*19333*UP*840008249267~\\nPID*F*08***12oz Cocktail Tumbler, Majestic Purple, Matte~\\nCTP**UCP*8.66~\\nQTY*33*0*EA~\\nLS*REF~\\nREF*WS*WH8*0~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*0~\\nLE*REF~\\nLIN*3*SK*5227843*VN*9815*UP*840008208615~\\nPID*F*08***12oz Skinny Can Cooler, Majestic Purple, Matte~\\nCTP**UCP*8.15~\\nQTY*33*3678*EA~\\nLS*REF~\\nREF*WS*WH8*3~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*5~\\nLE*REF~\\nLIN*4*SK*5227853*VN*5427*UP*819260024486~\\nPID*F*08***26oz Water Bottle, Cardinal, Matte~\\nCTP**UCP*9.17~\\nQTY*33*1248*EA~\\nLS*REF~\\nREF*WS*WH8*3~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*5~\\nLE*REF~\\nLIN*5*SK*5227854*VN*19338*UP*840008249311~\\nPID*F*08***26oz Water Bottle, Lake Blue, Matte~\\nCTP**UCP*9.17~\\nQTY*33*0*EA~\\nLS*REF~\\nREF*WS*WH8*0~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*0~\\nLE*REF~\\nLIN*6*SK*5227855*VN*11077*UP*840008221652~\\nPID*F*08***26oz Water Bottle, Majestic Purple, Matte~\\nCTP**UCP*9.17~\\nQTY*33*71*EA~\\nLS*REF~\\nREF*WS*WH8*1~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*0~\\nLE*REF~\\nLIN*7*SK*5227856*VN*15153*UP*840008228255~\\nPID*F*08***32oz Bottle, Cardinal, Matte~\\nCTP**UCP*11.72~\\nQTY*33*59*EA~\\nSCH*140*EA***018*20230626*100000~\\nLS*REF~\\nREF*WS*WH8*5~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*4~\\nDTM*018*20230626*100000*20*UN*140~\\nLE*REF~\\nLIN*8*SK*5227857*VN*15162*UP*840008228439~\\nPID*F*08***32oz Bottle, Lake Blue, Matte~\\nCTP**UCP*11.72~\\nQTY*33*1419*EA~\\nLS*REF~\\nREF*WS*WH8*3~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*6~\\nLE*REF~\\nLIN*9*SK*5230191*VN*5425*UP*819260024448~\\nPID*F*08***26oz Water Bottle, Charcoal, Matte~\\nDTM*036*20230312*222006*20~\\nCTP**UCP*9.17~\\nQTY*20*0*EA~\\nLS*REF~\\nREF*WS*WH8*0~\\nREF*WS*WH9*0~\\nREF*WS*WH10*0~\\nREF*WS*WH14*0~\\nREF*WS*WH20*0~\\nLE*REF~\\nCTT*9~\\nSE*105*0001~\\nGE*1*359~\\nIEA*1*000000359~\"}"
   },
   "request": {}
 }
+

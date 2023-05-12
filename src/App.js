@@ -44,11 +44,9 @@ class App extends Component {
     }
   }
 
-  doFakeProcess = () => {
+  doFakeProcess = (beSuccess) => {
     window.setTimeout(() => {
-      const index = Math.random();
-      console.log(index);
-      if (index > 0.5) {
+      if (beSuccess) {
         this.markValid(EXAMPLE1);
       } else {
         this.markInvalid(EXAMPLE2);
@@ -77,7 +75,8 @@ class App extends Component {
         return {
           code: error.response.data.code,
           message: error.response.data.msg,
-          context: context
+          context: context,
+          data: error.response.data
         };
       } else if (error.request) {
         // The request was made but no response was received
@@ -86,7 +85,8 @@ class App extends Component {
         return {
           code: 'NETWORK_FAILURE',
           message: context.message,
-          context: context
+          context: context,
+          full: info
         };
       } else {
         // Something happened in setting up the request that triggered an Error
@@ -108,16 +108,14 @@ class App extends Component {
   };
 
   doRealProcess = () => {
-    Api.post('/translate', {
-        input: this.state.document,
-        input_format: 'edi',
-        output_format: 'jedi@2.0'
+    Api.post('/x12/to-json', {
+        input: this.state.document
       })
       .then(res => {
-        if ('data' in res && 'code' in res.data && res.data.code === "valid") {
-          this.markValid(res);
-        } else {
+        if ('data' in res && 'error' in res.data) {
           this.markInvalid(res);
+        } else {
+          this.markValid(res);
         }
       })
       .catch(err => {
@@ -130,7 +128,7 @@ class App extends Component {
     e.preventDefault();
     this.setState({ confirming: false, processing: true, processed: false, results: null, error: null });
     if (SWAP_IN_FAKE) {
-      this.doFakeProcess();
+      this.doFakeProcess(true);
     } else {
       this.doRealProcess();
     }
@@ -138,7 +136,12 @@ class App extends Component {
 
   doConfirmNo = (e) => {
     e.preventDefault();
-    this.setState({ results: null, textActive: true, confirming: false });
+    if (SWAP_IN_FAKE) {
+      this.setState({ confirming: false, processing: true, processed: false, results: null, error: null });
+      this.doFakeProcess(false);
+    } else {
+      this.setState({ results: null, textActive: true, confirming: false });
+    }
   };
 
   changedText = (e) => {
@@ -155,11 +158,18 @@ class App extends Component {
             {!this.state.confirming && !this.state.processing &&
               <button onClick={this.doValidate}>Validate</button>
             }
-            {this.state.confirming &&
+            {this.state.confirming && !SWAP_IN_FAKE &&
               <div className="confirm">
                 <span>Are you sure? It costs money.</span>
                 <button onClick={this.doConfirmYes}>Yes</button>
                 <button onClick={this.doConfirmNo}>No</button>
+              </div>
+            }
+            {this.state.confirming && SWAP_IN_FAKE &&
+              <div className="confirm">
+                <span>Which kind of response do you want?</span>
+                <button onClick={this.doConfirmYes}>Success</button>
+                <button onClick={this.doConfirmNo}>Failure</button>
               </div>
             }
             {this.state.processing &&
